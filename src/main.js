@@ -21,11 +21,11 @@
     }
 
     // setInterval still seems to be faster than this most of the time.
-    //window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-    //    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-    //requestAnimationFrame(update);
-    setInterval(update, 1000 / FPS);
+    requestAnimationFrame(update);
+//    setInterval(update, 1000 / FPS);
 
     var CELL_SIZE = VIEW_SIZE / NUM_OF_CELLS,  // Size of each cell in pixels
         CELL_SIZE_CEIL = Math.ceil(CELL_SIZE); // Size of each cell in pixels (ceiling)
@@ -384,7 +384,7 @@
         // lastTime is now
         lastTime = Date.now();
 
-        //requestAnimationFrame(update);
+        requestAnimationFrame(update);
 
     } // End update()
 
