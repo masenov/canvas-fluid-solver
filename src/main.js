@@ -17,6 +17,7 @@
         // Lower settings if we're on mobile
         NUM_OF_CELLS = 64;
         VIEW_SIZE = window.outerWidth - 2; // 1px border on each side
+        FPS = 30;
     }
 
     // setInterval still seems to be faster than this most of the time.
